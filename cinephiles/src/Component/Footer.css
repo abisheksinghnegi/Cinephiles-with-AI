@@ -1,0 +1,143 @@
+#footer {
+    background-color: rgb(21 21 27);
+    position: relative;
+    bottom: 0;
+    height: 500px; /* Original height */
+    width: 100%;
+    color: rgb(200, 200, 200);
+    overflow: hidden;
+}
+
+#div1 {
+    height: 240px; /* Original height */
+    width: 100%;
+    border-bottom: #808080 2px solid;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dib1 {
+    width: 400px; /* Original width */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-left: 70px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: smaller;
+}
+
+.h {
+    font-size: small;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dib2 {
+    width: 15%; /* Original width */
+    font-size: xx-small;
+    font-family: 'Times New Roman', Times, serif;
+    color: #808080;
+    display: grid;
+    align-items: center;
+    padding: 20px;
+}
+
+#div2 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#spng {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 70px;
+}
+
+.giticon1 {
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.giticon1:hover {
+    transform: scale(1.1);
+}
+
+#h4 {
+    font-size: small;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+    color: #808080;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        overflow: hidden;
+        height: auto; /* Allow footer to adjust height */
+        padding: 20px 0; /* Add some padding */
+    }
+
+    #div1 {
+        flex-direction: row; /* Stack elements vertically */
+        align-items: center; /* Center horizontally */
+        height: auto; /* Remove fixed height */
+        padding: 20px;
+    }
+
+    .dib1 {
+        width: 90%; /* Take up most of the width */
+        padding: 0; /* Remove left padding */
+        margin: 20px 0; /* Add margin top and bottom */
+        text-align: center;
+        font-size: xx-small;
+    }
+
+    .dib2 {
+        width: 90%; /* Take up most of the width */
+        font-size: small; /* Adjust font size */
+        display: flex; /* Use flexbox */
+        flex-direction: row; /* Stack vertically */
+        align-items: center; /* Center horizontally */
+        /* margin: 20px 0; */
+        gap: 20px;
+    }
+
+    .h{
+        font-size: x-small;
+    }
+    #aa{
+        visibility: hidden;
+    }
+
+    #aa2{
+        visibility: hidden;
+    }
+    #aa3{
+        visibility: hidden;
+    }
+
+    #spng {
+        flex-direction: row; /* Stack icons vertically */
+        margin-top: 20px;
+        gap: 10px
+    }
+    .giticon1 {
+        height: 30px; /* Adjust icon sizes */
+        width: 30px;
+    }
+
+    #h4 {
+        margin: 20px 0; /* Adjust margin */
+        text-align: center; /* Center text */
+        margin-left: 0;
+        font-size: x-small;
+    }
+}

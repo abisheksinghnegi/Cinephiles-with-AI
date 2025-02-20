@@ -1,0 +1,111 @@
+#container{
+    margin-top: 0%;
+    background-color: rgb(21 21 27);
+    height: 13vh;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#appname{
+    margin-top: 35px;
+    margin-left: 70px;
+    color: rgb(255, 248, 57);
+    text-shadow: 2px 2px #ff0000;
+    font-family: fantasy;
+    animation: tfont2 ease;
+    animation-timeline: view();
+}
+
+#appname:hover {
+    -webkit-text-stroke: 0.1px rgb(79, 79, 79);
+    color: #ff5757ff;
+    text-shadow: 2px 2px rgb(255, 248, 57);
+}
+
+@keyframes tfont2 {
+    0% {
+        transform: scaleX(1.9) scaleY(2);
+    }
+    100% {
+        transform: scaleX(1.9) scaleY(2);
+    }
+}
+
+
+#links{
+    animation: tex 2s ease-in-out;
+    display: flex;
+    gap: 50px;
+    margin-top: 27px;
+    width: 700px; /* Keep this width for larger screens */
+    margin-left: 620px; /* Keep this margin for larger screens */
+}
+
+.l{
+    text-decoration: none;
+    color: #6eb3ff;
+    height: 20px;
+    padding: 10px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.l:hover{
+    color: #edf6ff;
+}
+
+#oglogo{
+    margin-left: 40px;
+    padding: 5px;
+    height: 80px;
+    animation: pic 2s ease-in-out;
+}
+
+/* Media query for smaller screens (phones) */
+@media (max-width: 768px) { /* Adjust 768px as needed */
+    
+    #links {
+        
+        align-items: center; /* Center the links */
+        margin-left: 20px; /* Remove the left margin */
+        width: 100%; /* Make links container full width */ 
+        margin-top: 10px; /* Adjust top margin */
+        font-size: xx-small;
+        gap: 0%;
+    }
+
+    .l {
+        width: 8%; /* Make links wider on smaller screens */
+        margin: 5px 0; /* Add some margin around each link */
+    }
+
+    #appname {
+        margin-top: 15px; /* Adjust top margin for appname */
+        text-align: center; /* Center the appname */
+        font-size: small;
+        font-family: fantasy;
+    }
+
+
+    #oglogo {
+        margin-left: 20px; /* Reduce left margin for logo */
+        height: 40px; /* Slightly reduce the height of the logo */
+    }
+
+    #container{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+}
+
+
+@keyframes pic {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

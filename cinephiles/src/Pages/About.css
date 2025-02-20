@@ -1,0 +1,196 @@
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url("../images/bg2.jpg");
+    background-size: cover  ;
+}
+
+.card {
+    box-shadow: 20px blue;
+    width: 340px;
+    height: 430px;
+    padding: 40px;
+    perspective: 1000px;
+    cursor: pointer;
+    animation: abo 1s linear;
+    
+  }
+
+@keyframes abo {
+   0%{
+    opacity: 0;
+   }
+   100%{
+    opacity: 1;
+   }
+  
+}
+  
+  .card-inner {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    border-radius: 20px;
+    transform: rotateY(180deg);
+    box-shadow: 0 0 40px rgb(255, 0, 0);
+  }
+  
+  
+  .card-front,
+  .card-back {
+
+    border-radius: 20px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .card-front {
+
+    background: rgba(21, 21, 27, 0.633);
+    backdrop-filter: blur(7px) saturate(180%);
+    color: white;
+  }
+  
+  .card-back {
+    background: rgba(21, 21, 27, 0.633);
+    backdrop-filter: blur(7px) saturate(180%);
+    color: white;
+    transform: rotateY(180deg);
+    display: grid;
+    align-items: center;
+    
+  }
+  
+
+  .icons{
+    display: flex;
+    /* gap: 20px; */
+}
+
+.iconname{
+   margin-top:32px;
+   margin-left: 20px;
+   font-size: medium;
+   color: #c3c3c3;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.giticon {
+    height: 80px;
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.giticon:hover {
+    transform: rotate(10deg); /* Rotates by 10 degrees */
+}
+
+
+#avatar{
+    height: 120px;
+    width: 115px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;    
+    margin-top: 30px;
+}
+
+#avatar:hover {
+    transform: scale(1.02);
+}
+
+#avatarcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#avatardetail{
+    width: 110%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.ad{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+#paragraph{
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    #about {
+        height: 200vh; /* Adjust height for smaller screens */
+        padding: 20px; /* Add some padding */
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%; /* Make card take up most of the screen width */
+        height: 400px; /* Allow height to adjust */
+        padding: 20px; /* Reduce padding */
+        margin: 20px auto; /* Center the card */
+    }
+    .icons{
+      justify-content: center;
+      align-items: center;
+    }
+    .iconname {
+        font-size: small; /* Smaller font size */
+        margin-left: 10px; /* Reduce margin */
+        margin-bottom: 30px;
+        margin-right: 10px;
+    }
+
+    .giticon {
+        height: 30px; /* Smaller icon size */
+        width: 30px;
+        padding-left: 10px;
+    }
+
+    #avatar {
+        height: 80px; /* Smaller avatar size */
+        width: 75px;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    #avatardetail {
+        flex-direction: row; /* Stack details vertically */
+        align-items: center; /* Center details */
+        margin-bottom: 20px;
+        font-family: monospace;
+        font-size: x-small;
+    }
+
+    .ad {
+        font-size: smaller; /* Smaller font size */
+        text-align: center;
+    }
+
+    #paragraph {
+        padding: 20px; /* Reduce padding */
+        font-size: small; /* Smaller font size */
+    }
+    .card-back{
+      display: flex;
+    }
+}

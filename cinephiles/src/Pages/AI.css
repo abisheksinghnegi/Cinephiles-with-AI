@@ -1,0 +1,222 @@
+/* Main Container */
+#container1 {
+    background-image: url("../images//bg.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 970px;
+    background-color: #252525;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+}
+
+#robo{
+    height: 800px;
+    animation: pic 2s ease-in-out;
+}
+
+#container2 {
+    -webkit-box-shadow: 0 0 25px #6dbef8;
+        box-shadow: 0 0 25px #6dbef8;
+    margin-top: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    width: 32%;
+    background-color: #1f1f1f4a;
+    padding: 40px;
+    backdrop-filter: blur(7px) saturate(180%);
+    animation: tex 2s ease-in-out;
+
+}
+
+#a{
+    color: #ffffffd6;
+    font-size: medium;
+    font-family: fantasy;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+
+    animation: tfont ease;
+    animation-timeline: view();
+}
+
+#a:hover {
+    -webkit-text-stroke: 0.1px rgb(126, 126, 126);
+    color: transparent;
+}
+
+
+@keyframes tfont {
+    0% {
+        transform: scaleX(1.4) scaleY(1);
+    }
+    100% {
+        transform: scaleX(1.4) scaleY(1);
+    }
+}
+
+
+/* Chat History */
+#chat-history {
+    border-radius: 20px;
+    overflow-y: auto;
+    padding: 20px;
+    width: 100%;
+    flex: 1;
+
+}
+
+#ask{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* User Message Bubble */
+.user-message {
+    align-self: flex-end;
+    text-align: right;
+    box-shadow: 4px 4px 5px rgba(36, 36, 36, 0.33);
+    margin: 10px 0;
+    color: #ffffffbf;
+    background-color: #14141491;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.user-message div {
+    text-align: right;
+    display: inline-block;
+  
+    padding: 10px 15px;
+    border-radius: 20px 0 20px 20px;
+    max-width: 80%; /* Maximum width for responsiveness */
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+/* AI Message Bubble */
+.ai-message {
+    box-shadow: -4px 4px 5px rgba(36, 36, 36, 0.33);
+    align-self: flex-start;
+    text-align: left;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #3249c094;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ai-message div {
+    display: inline-block;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 20px;
+    max-width: 80%; /* Maximum width for responsiveness */
+    word-wrap: break-word;
+    box-sizing: border-box;
+   
+}
+
+/* Input Section */
+#ques {
+    width: 80%;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #1f1f1f93;
+    margin-right: 10px;
+    resize: none;
+}
+
+#ques:hover{
+    background-color: #62626260;
+    color: white;
+}
+
+#btn {
+    font-size: x-small;
+    text-decoration: none;
+    /* padding: 10px 15px; */
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 52px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn:hover {
+    background: #218838;
+}
+
+/* Input Area at Bottom */
+#input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+
+@media (max-width: 768px) {
+    #container1 {
+        flex-direction: column;
+        height: 600px; /* Allow height to adjust */
+        justify-content: start;
+        align-items: center;
+    }
+   
+
+    #robo {
+        margin-top: 50px;
+        height: 100px; /* Adjust robot image height */
+        width: 100px; /* Maintain aspect ratio */
+    }
+
+    #container2 {
+        width: 80%; /* Make container wider */
+        height: 50%; /* Allow height to adjust */
+        padding: 30px; /* Reduce padding */
+   
+    }
+
+    #a {
+        height: 1px;
+        width: 1px;
+       visibility: hidden;
+    }
+
+    .user-message div, .ai-message div {
+        max-width: 90%; /* Adjust message bubble width */
+        font-size: small; /* Smaller font size */
+        padding: 10px 15px; /* Reduce padding */
+    }
+
+    #ques {
+        width: 70%; /* Adjust input width */
+        font-size: small; /* Smaller font size */
+    }
+
+    #btn {
+        font-size: xx-small; /* Smaller font size */
+        height: 40px; /* Adjust button height */
+        width: 50px; /* Adjust button width */
+    }
+}   

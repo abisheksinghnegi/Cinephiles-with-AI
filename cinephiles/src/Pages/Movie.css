@@ -1,0 +1,147 @@
+#mainbg{
+    background-image: url("../images//bgg.jpg");
+    background-size: contain;
+    height: 2950px;
+}
+
+#searchcont{ 
+    margin-left: 70% ;
+    width: 20%;
+    height: 35px;
+    margin-top: 20px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.386);
+    color: white;
+    border-style: double;
+
+}
+#searchcont:hover{
+    background-color: rgba(240, 248, 255, 0.267);
+}
+
+#searchbtn{
+    padding: 5px;
+    height: 39px;
+    width: 80px;
+    border-style: double white ;
+    color: white;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: rgba(132, 132, 132, 0.873);
+    cursor: pointer;
+}
+
+#searchbtn:hover{
+    background-color: rgb(103, 103, 103);
+}
+
+#search{
+    width: 100%;
+}
+
+.poster{
+    height: 300px;
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 16px;
+    transition: 0.2s linear;
+    padding: 10px;
+    border-radius: 15px;
+    animation: pp 0.5s ease;
+}
+
+@keyframes pp {
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }  
+    100%{
+    
+        transform:  scale(1);
+        opacity: 1;
+    }  
+}
+    
+
+
+.poster:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.genrecon{
+    margin-left: 15px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+.scroll-container{
+  margin-left: 50px;
+  display: flex;
+  overflow-x: auto;
+  height: 400px;
+  width: 92%;
+  gap: 20px;
+  padding-top: 10px;
+  background-color: rgba(35, 35, 35, 0.566);
+  backdrop-filter: blur(7px);
+  border-radius: 20px;
+
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.title{
+    font-family: sans-serif;
+    margin-left: 40px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #searchcont {
+        margin-left: 5%;
+        width: 73%;
+        margin-top: 10px;
+    }
+
+    #searchbtn {
+        width: auto;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+
+    .scroll-container {
+        margin-left: 10px;
+        width: 95%;
+        height: auto; /* Let height adjust automatically */
+        /* Remove flex-wrap: wrap; to keep horizontal scrolling */
+        justify-content: flex-start; /* Align items to the start for horizontal scroll */
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+
+    .poster {
+        width: 150px;
+        height: 225px;
+        margin: 10px;
+    }
+
+    .title {
+        margin-left: 10px;
+    }
+
+    #mainbg{
+        background-size: cover;
+        height: auto;
+        overflow: hidden;
+    }
+    #form{
+        display: flex;
+    }
+}
